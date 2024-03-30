@@ -59,9 +59,5 @@ class Parser:
                 self.eat(TokenType.MINUS)
             elif token.type == TokenType.PLUS:
                 self.eat(TokenType.PLUS)
-            elif token.type == TokenType.MUL:
-                self.eat(TokenType.MUL)
-            elif token.type == TokenType.DIV:
-                self.eat(TokenType.DIV)
             node = BinOp(left=node, op=token, right=self.term())
         return node
