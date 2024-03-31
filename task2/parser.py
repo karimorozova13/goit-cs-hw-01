@@ -53,7 +53,7 @@ class Parser:
             self.error()
     def expr(self):
         node = self.term()
-        while self.cur_token.type in [TokenType.MINUS, TokenType.PLUS, TokenType.MUL, TokenType.DIV]:
+        while self.cur_token.type in [TokenType.MINUS, TokenType.PLUS]:
             token = self.cur_token
             if token.type == TokenType.MINUS:
                 self.eat(TokenType.MINUS)
